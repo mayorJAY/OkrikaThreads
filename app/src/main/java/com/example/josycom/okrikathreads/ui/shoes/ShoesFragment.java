@@ -1,4 +1,4 @@
-package com.example.josycom.okrikathreads.ui.share;
+package com.example.josycom.okrikathreads.ui.shoes;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,17 +14,17 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.josycom.okrikathreads.R;
 
-public class ShareFragment extends Fragment {
+public class ShoesFragment extends Fragment {
 
-    private ShareViewModel shareViewModel;
+    private ShoesViewModel shoesViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        shareViewModel =
-                ViewModelProviders.of(this).get(ShareViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_share, container, false);
-        final TextView textView = root.findViewById(R.id.text_share);
-        shareViewModel.getText().observe(this, new Observer<String>() {
+        shoesViewModel =
+                ViewModelProviders.of(this).get(ShoesViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_shoes, container, false);
+        final TextView textView = root.findViewById(R.id.text_shoes);
+        shoesViewModel.getText().observe(this, new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);

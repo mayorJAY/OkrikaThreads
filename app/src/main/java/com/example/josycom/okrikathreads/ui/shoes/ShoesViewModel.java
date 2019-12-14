@@ -1,16 +1,16 @@
-package com.example.josycom.okrikathreads.ui.send;
+package com.example.josycom.okrikathreads.ui.shoes;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class SendViewModel extends ViewModel {
+public class ShoesViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public SendViewModel() {
+    public ShoesViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is send fragment");
+        mText.setValue("This is shoes fragment");
     }
 
     public LiveData<String> getText() {

@@ -1,16 +1,16 @@
-package com.example.josycom.okrikathreads.ui.gallery;
+package com.example.josycom.okrikathreads.ui.clothes;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class GalleryViewModel extends ViewModel {
+public class ClothesViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public GalleryViewModel() {
+    public ClothesViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is gallery fragment");
+        mText.setValue("This is clothes fragment");
     }
 
     public LiveData<String> getText() {

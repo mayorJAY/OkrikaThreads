@@ -1,4 +1,4 @@
-package com.example.josycom.okrikathreads.ui.send;
+package com.example.josycom.okrikathreads.ui.clothes;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,17 +14,17 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.josycom.okrikathreads.R;
 
-public class SendFragment extends Fragment {
+public class ClothesFragment extends Fragment {
 
-    private SendViewModel sendViewModel;
+    private ClothesViewModel clothesViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        sendViewModel =
-                ViewModelProviders.of(this).get(SendViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_send, container, false);
-        final TextView textView = root.findViewById(R.id.text_send);
-        sendViewModel.getText().observe(this, new Observer<String>() {
+        clothesViewModel =
+                ViewModelProviders.of(this).get(ClothesViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_clothes, container, false);
+        final TextView textView = root.findViewById(R.id.text_clothes);
+        clothesViewModel.getText().observe(this, new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
